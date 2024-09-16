@@ -12,6 +12,7 @@ const meta: Meta = {
     label: { control: "text" },
     required: { control: "boolean" },
     infoIcon: { control: "boolean" },
+    theme: { control: "radio", options: ["light", "dark"] },
   },
 };
 
@@ -29,18 +30,18 @@ const Template: StoryFn<InputLabelProps & { theme: "light" | "dark" }> = (
   );
 };
 
-export const LightTheme = Template.bind({});
-LightTheme.args = {
+export const Default = Template.bind({});
+Default.args = {
   label: "Email",
   required: true,
   infoIcon: true,
   theme: "light",
 };
 
-export const DarkTheme = Template.bind({});
-DarkTheme.args = {
-  label: "Email",
-  required: true,
-  infoIcon: true,
-  theme: "dark",
-};
+// export const DarkTheme = Template.bind({});
+// DarkTheme.args = {
+//   label: "Email",
+//   required: true,
+//   infoIcon: true,
+//   theme: "dark",
+// };
