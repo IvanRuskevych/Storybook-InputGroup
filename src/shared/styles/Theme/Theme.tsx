@@ -1,25 +1,23 @@
 import { ThemeProvider } from "styled-components";
-import { ReactNode } from "react";
-import { GlobalStyles } from "./global.styles.ts";
 
-const lightTheme = {
+import { ThemeStylesProps } from "../../types";
+import { GlobalStyles } from "../global.styles.ts";
+
+export const lightTheme = {
   colors: {
-    primary: "#ffffff",
+    textPrimary: "#1a1a1e",
+    error: "#D92D20",
     secondary: "#000000",
   },
 };
 
-const darkTheme = {
+export const darkTheme = {
   colors: {
-    primary: "#000000",
+    textPrimary: "#FAFAFA",
+    error: "#D92D20",
     secondary: "#ffffff",
   },
 };
-
-interface ThemeStylesProps {
-  children: ReactNode;
-  theme: "light" | "dark";
-}
 
 export const ThemeStyles = ({ children, theme }: ThemeStylesProps) => {
   const selectedTheme = theme === "light" ? lightTheme : darkTheme;
