@@ -1,39 +1,37 @@
 import { Meta, StoryFn } from "@storybook/react";
 import { ThemeProvider } from "styled-components";
 
-import { InputLabelProps } from "../shared/types";
-import { InputLabel } from "../shared/ui";
+import { InputAnnotationProps } from "../shared/types";
+import { InputAnnotation } from "../shared/ui";
 import { darkTheme, lightTheme } from "../shared/styles";
 
 const meta: Meta = {
-  title: "Components/InputLabel",
-  component: InputLabel,
+  title: "Components/InputAnnotation",
+  component: InputAnnotation,
   argTypes: {
-    label: { control: "text" },
-    required: { control: "boolean" },
-    infoIcon: { control: "boolean" },
+    text: { control: "text" },
+    textOptions: { control: "radio", options: ["description", "error"] },
     theme: { control: "radio", options: ["light", "dark"] },
   },
 };
 
 export default meta;
 
-const Template: StoryFn<InputLabelProps & { theme: "light" | "dark" }> = (
+const Template: StoryFn<InputAnnotationProps & { theme: "light" | "dark" }> = (
   args,
 ) => {
   const selectedTheme = args.theme === "light" ? lightTheme : darkTheme;
 
   return (
     <ThemeProvider theme={selectedTheme}>
-      <InputLabel {...args} />
+      <InputAnnotation {...args} />
     </ThemeProvider>
   );
 };
 
 export const Default = Template.bind({});
 Default.args = {
-  label: "Email",
-  required: true,
-  infoIcon: true,
+  text: "This is a hint text to help user.",
+  textOptions: "description",
   theme: "light",
 };
