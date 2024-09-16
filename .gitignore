@@ -145,3 +145,5 @@ dist
 
 # other
 dist-ssr
+
+*storybook.log
