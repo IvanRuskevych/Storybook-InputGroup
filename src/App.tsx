@@ -6,13 +6,10 @@ function App() {
   return (
     <ThemeStyles theme={"light"}>
       <InputLabel label={"Email"} required={true} infoIcon={true} />
+      <InputAnnotation text={"This is a hint text to help user."} />
       <InputAnnotation
         text={"This is a hint text to help user."}
-        $textOptions={"description"}
-      />
-      <InputAnnotation
-        text={"This is a hint text to help user."}
-        $textOptions={"error"}
+        isError={true}
       />
 
       <InputText placeholder={"Input..."} />

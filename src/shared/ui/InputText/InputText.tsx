@@ -1,6 +1,7 @@
-import { InputTextWrapper } from "./InputText.styles.ts";
 import { FC } from "react";
 import clsx from "clsx";
+
+import { InputTextWrapper } from "./InputText.styles.ts";
 
 interface InputTextProps {
   placeholder: string;

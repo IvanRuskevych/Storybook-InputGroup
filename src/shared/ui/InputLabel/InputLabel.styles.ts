@@ -17,12 +17,12 @@ export const InputLabelWrapper = styled.div`
   }
 
   & span {
-    color: ${({ theme }) => theme.colors.error};
+    color: ${({ theme }) => theme.colors.textError};
   }
 
   & svg {
     width: 12px;
     height: 12px;
-    fill: #a0a0ab;
+    fill: ${({ theme }) => theme.colors.fillSvg};
   }
 `;

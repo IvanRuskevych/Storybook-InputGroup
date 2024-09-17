@@ -1,10 +1,16 @@
 import { FC } from "react";
-import { StyledParagraph } from "./InputAnnotation.styles.ts";
+
 import { InputAnnotationProps } from "../../types";
+import { StyledParagraph } from "./InputAnnotation.styles.ts";
+import clsx from "clsx";
 
 export const InputAnnotation: FC<InputAnnotationProps> = ({
   text,
-  $textOptions,
+  isError = false,
 }) => {
-  return <StyledParagraph $textOptions={$textOptions}>{text}</StyledParagraph>;
+  return (
+    <StyledParagraph className={clsx({ "text-error": isError })}>
+      {text}
+    </StyledParagraph>
+  );
 };
