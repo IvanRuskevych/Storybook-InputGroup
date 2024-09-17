@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const StyledParagraph = styled.p<{
-  textOptions: "description" | "error";
+  $textOptions: "description" | "error";
 }>`
-  color: ${({ textOptions, theme }) =>
-    textOptions === "description"
+  color: ${({ $textOptions, theme }) =>
+    $textOptions === "description"
       ? theme.colors.textSecondary
       : theme.colors.error};
 

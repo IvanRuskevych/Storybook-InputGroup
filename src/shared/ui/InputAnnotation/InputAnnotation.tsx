@@ -4,7 +4,7 @@ import { InputAnnotationProps } from "../../types";
 
 export const InputAnnotation: FC<InputAnnotationProps> = ({
   text,
-  textOptions,
+  $textOptions,
 }) => {
-  return <StyledParagraph textOptions={textOptions}>{text}</StyledParagraph>;
+  return <StyledParagraph $textOptions={$textOptions}>{text}</StyledParagraph>;
 };
