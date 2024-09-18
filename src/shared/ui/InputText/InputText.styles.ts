@@ -1,34 +1,20 @@
 import styled from "styled-components";
 
-export const InputTextWrapper = styled.div<{}>`
+export const InputTextWrapper = styled.div`
   & input {
-    padding: 8px 12px; //--spacing-md=12 --spacing-lg=8
-    border-radius: 4px; // --radius-xs
-    background-color: ${({ theme }) => theme.colors.bgPrimary};
-    color: ${({ theme }) => theme.colors.textPrimary};
-    /* Text xxs/Regular */
-    font-family: Inter, sans-serif;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20px; /* 166.667% */
-
     overflow: hidden;
     text-overflow: ellipsis;
-
     border: 1px solid ${({ theme }) => theme.colors.borderPrimary};
+    border-radius: 4px; // --radius-xs
+    color: ${({ theme }) => theme.colors.textPrimary};
+    background-color: ${({ theme }) => theme.colors.bgPrimary};
 
     &::placeholder {
-      //overflow: hidden;
-      //text-overflow: ellipsis;
-      color: ${({ theme }) => theme.colors.textPlaceholder};
-
-      /* Text sm/Regular */
-      //font-family: Inter, sans-serif;
+      overflow: hidden;
+      text-overflow: ellipsis;
       font-size: 14px;
-      //font-style: normal;
-      //font-weight: 400;
-      line-height: 24px; /* 171.429% */
+      line-height: 1.71429; /* 24px*/
+      color: ${({ theme }) => theme.colors.textPlaceholder};
     }
 
     &:hover {
@@ -45,6 +31,30 @@ export const InputTextWrapper = styled.div<{}>`
       outline: none;
       border: 1px solid ${({ theme }) => theme.colors.borderError};
       box-shadow: 0 0 0 4px ${({ theme }) => theme.colors.borderShadowError};
+    }
+
+    &.xs {
+      padding: 2px 12px;
+      font-size: 12px;
+      line-height: 1.66667; /* 20px */
+    }
+
+    &.sm {
+      padding: 8px 12px;
+      font-size: 12px;
+      line-height: 1.66667;
+    }
+
+    &.lg {
+      padding: 8px 12px 8px 16px;
+      font-size: 14px;
+      line-height: 1.71429; /* 24px */
+    }
+
+    &.xl {
+      padding: 12px 12px 12px 16px;
+      font-size: 14px;
+      line-height: 1.71429; /* 24px */
     }
   }
 

@@ -7,13 +7,14 @@ interface InputTextProps {
   placeholder: string;
   isInvisibleBorder?: boolean;
   isError?: boolean;
-  // size?: "small" | "medium" | "large";
+  size?: "xs" | "sm" | "lg" | "xl";
 }
 
 export const InputText: FC<InputTextProps> = ({
   placeholder,
   isInvisibleBorder = false,
   isError = false,
+  size = "md",
 }) => {
   return (
     <InputTextWrapper>
@@ -23,6 +24,7 @@ export const InputText: FC<InputTextProps> = ({
         className={clsx({
           "invisible-border": isInvisibleBorder,
           "focus-error": isError,
+          [size]: size,
         })}
       />
     </InputTextWrapper>
