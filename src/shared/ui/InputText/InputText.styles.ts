@@ -2,8 +2,11 @@ import styled from "styled-components";
 
 export const InputTextWrapper = styled.div`
   position: relative;
+  min-width: 250px;
 
   & input {
+    width: 100%;
+    box-sizing: border-box; // TODO check reset styles
     overflow: hidden;
     text-overflow: ellipsis;
     border: 1px solid ${({ theme }) => theme.colors.borderPrimary};

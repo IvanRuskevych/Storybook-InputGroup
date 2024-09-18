@@ -1,31 +1,40 @@
-import { FC } from "react";
+import { ChangeEvent, FC } from "react";
 import clsx from "clsx";
 
-import { InputTextWrapper } from "./InputText.styles.ts";
 import spritePath from "../../../assets/svg/sprite.svg";
+import { InputTextWrapper } from "./InputText.styles.ts";
 
-interface InputTextProps {
+export interface InputTextProps {
+  value?: string;
   placeholder: string;
+  customClass?: string;
   isInvisibleBorder?: boolean;
   isError?: boolean;
   size?: "xs" | "sm" | "lg" | "xl";
+  onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
 }
 
 export const InputText: FC<InputTextProps> = ({
+  value,
   placeholder,
+  customClass = "",
   isInvisibleBorder = false,
   isError = true,
   size = "sm",
+  onChange,
 }) => {
   return (
-    <InputTextWrapper>
+    <InputTextWrapper className={customClass}>
       <input
         type="text"
         placeholder={placeholder}
+        value={value}
+        onChange={onChange}
         className={clsx({
           "invisible-border": isInvisibleBorder,
           "focus-error": isError,
           [size]: size,
+          customClass,
         })}
       />
       <svg

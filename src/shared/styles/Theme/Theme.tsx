@@ -1,7 +1,7 @@
 import { ThemeProvider } from "styled-components";
 
 import { ThemeStylesProps } from "../../types";
-import { GlobalStyles } from "../global.styles.ts";
+import { GlobalStyles } from "../global.styles.tsx";
 
 export const lightTheme = {
   colors: {

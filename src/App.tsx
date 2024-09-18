@@ -1,5 +1,4 @@
 import { InputAnnotation, InputLabel, InputText } from "./shared/ui";
-import "./App.css";
 import { ThemeStyles } from "./shared/styles";
 
 function App() {
