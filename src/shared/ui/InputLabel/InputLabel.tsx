@@ -2,7 +2,7 @@ import { FC } from "react";
 
 import { InputLabelProps } from "../../types";
 import { InputLabelWrapper } from "./InputLabel.styles.ts";
-import spritePath from "../../../assets/svg/svg-sprite.svg";
+import spritePath from "../../../assets/svg/sprite.svg";
 
 export const InputLabel: FC<InputLabelProps> = ({
   label,
@@ -15,7 +15,7 @@ export const InputLabel: FC<InputLabelProps> = ({
       {required && <span>*</span>}
       {infoIcon && (
         <svg>
-          <use href={`${spritePath}#icon-info`}></use>
+          <use href={`${spritePath}#info-circle`}></use>
         </svg>
       )}
     </InputLabelWrapper>
