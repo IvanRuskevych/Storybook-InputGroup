@@ -27,6 +27,8 @@ export const GlobalStyles = createGlobalStyle`
         font-weight: 400;
         line-height: 1.66667; /* 20px */
         -webkit-font-smoothing: antialiased;
+        
+        padding: 50px;
     }
 
     /* 5. Improve media defaults */

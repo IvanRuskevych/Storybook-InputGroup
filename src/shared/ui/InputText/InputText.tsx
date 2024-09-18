@@ -1,31 +1,24 @@
-import { ChangeEvent, FC } from "react";
+import { FC } from "react";
 import clsx from "clsx";
 
-import spritePath from "../../../assets/svg/sprite.svg";
+import { InputTextProps } from "../../types";
+import { InputIcon } from "../InputIcon/InputIcon.tsx";
 import { InputTextWrapper } from "./InputText.styles.ts";
 
-export interface InputTextProps {
-  value?: string;
-  placeholder: string;
-  customClass?: string;
-  isInvisibleBorder?: boolean;
-  isError?: boolean;
-  size?: "xs" | "sm" | "lg" | "xl";
-  onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
-}
-
 export const InputText: FC<InputTextProps> = ({
+  id,
   value,
   placeholder,
-  customClass = "",
   isInvisibleBorder = false,
-  isError = true,
+  isError = false,
   size = "sm",
   onChange,
+  ...props
 }) => {
   return (
-    <InputTextWrapper className={customClass}>
+    <InputTextWrapper>
       <input
+        id={id}
         type="text"
         placeholder={placeholder}
         value={value}
@@ -34,28 +27,13 @@ export const InputText: FC<InputTextProps> = ({
           "invisible-border": isInvisibleBorder,
           "focus-error": isError,
           [size]: size,
-          customClass,
         })}
+        {...props}
       />
-      <svg
-        className={clsx("icon", "icon__search", `icon__search--${size}`, {
-          "icon__search--error": isError,
-        })}
-      >
-        <use href={`${spritePath}#search`}></use>
-      </svg>
-      <svg
-        className={clsx("icon", "icon__help", `icon__help--${size}`, {
-          "icon__help--error": isError,
-        })}
-      >
-        <use href={`${spritePath}#help`}></use>
-      </svg>
-      <svg
-        className={clsx("icon", "icon__shortkey", `icon__shortkey--${size}`)}
-      >
-        <use href={`${spritePath}#shortkey`}></use>
-      </svg>
+
+      <InputIcon iconType={"search"} size={size} isError={isError} />
+      <InputIcon iconType={"help"} size={size} isError={isError} />
+      <InputIcon iconType={"shortkey"} size={size} isError={isError} />
     </InputTextWrapper>
   );
 };

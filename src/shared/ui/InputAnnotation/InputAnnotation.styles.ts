@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const StyledParagraph = styled.p<{}>`
-  /* Text xxs/Regular */
   font-family: Inter, sans-serif;
   font-size: 12px;
   font-style: normal;
@@ -14,8 +13,3 @@ export const StyledParagraph = styled.p<{}>`
     color: ${({ theme }) => theme.colors.textError};
   }
 `;
-
-// color: ${({ $textOptions, theme }) =>
-// $textOptions === "description"
-//     ? theme.colors.textSecondary
-//     : theme.colors.textError};

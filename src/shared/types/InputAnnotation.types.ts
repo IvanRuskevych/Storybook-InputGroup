@@ -1,6 +1,5 @@
-export type textOptionsType = "description" | "error";
-
 export interface InputAnnotationProps {
   text: string;
+  textError: string;
   isError?: boolean;
 }

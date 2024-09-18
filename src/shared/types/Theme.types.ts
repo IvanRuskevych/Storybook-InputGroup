@@ -1,8 +1,7 @@
 import { ReactNode } from "react";
-
-type ThemeType = "light" | "dark";
+import { ThemeTypes } from "./UnionTypes.types.ts";
 
 export interface ThemeStylesProps {
   children: ReactNode;
-  theme: ThemeType;
+  theme: ThemeTypes;
 }
