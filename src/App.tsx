@@ -12,7 +12,7 @@ function App() {
         isError={true}
       />
 
-      <InputText placeholder={"Input..."} size={"sm"} />
+      <InputText placeholder={"Input..."} />
     </ThemeStyles>
   );
 }
