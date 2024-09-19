@@ -5,11 +5,11 @@ export const StyledParagraph = styled.p`
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: 20px; /* 166.667% */
+  line-height: 1.66667; /* 20px */
 
-  color: blue;
+  color: #51525c;
 
   &.text-error {
-    color: red;
+    color: #d92d20;
   }
 `;
