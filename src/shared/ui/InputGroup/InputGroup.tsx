@@ -1,4 +1,5 @@
 import { FC } from "react";
+import clsx from "clsx";
 
 import { InputGroupProps } from "../../types";
 import { InputLabel } from "../InputLabel/InputLabel.tsx";
@@ -10,10 +11,16 @@ export const InputGroup: FC<InputGroupProps> = ({
   inputLabelProps,
   inputTextProps,
   inputAnnotationProps,
+  position = "side",
   ...props
 }) => {
   return (
-    <InputGroupContainer {...props}>
+    <InputGroupContainer
+      {...props}
+      className={clsx({
+        "position--side": position === "side",
+      })}
+    >
       <InputLabel {...inputLabelProps} />
       <InputText {...inputTextProps} />
       <InputAnnotation {...inputAnnotationProps} />

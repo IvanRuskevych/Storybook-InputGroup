@@ -13,6 +13,8 @@ export const InputText: FC<InputTextProps> = ({
   isError = false,
   size = "sm",
   onChange,
+  position,
+
   ...props
 }) => {
   return (
@@ -26,6 +28,7 @@ export const InputText: FC<InputTextProps> = ({
         className={clsx({
           "invisible-border": isInvisibleBorder,
           "focus-error": isError,
+          "input__position--side": position,
           [size]: size,
         })}
         {...props}
