@@ -10,6 +10,7 @@ const meta: Meta = {
   title: "Components/InputText",
   component: InputText,
   argTypes: {
+    theme: { control: "radio", options: ["light", "dark"] },
     value: { control: "text" },
     placeholder: { control: "text" },
     isInvisibleBorder: { control: "boolean" },
@@ -33,9 +34,9 @@ const Template: StoryFn<InputTextProps & { theme: ThemeTypes }> = (args) => {
 
 export const Default = Template.bind({});
 Default.args = {
+  theme: "light",
   placeholder: "",
   isInvisibleBorder: false,
   isError: false,
   size: "sm",
-  theme: "light",
 };

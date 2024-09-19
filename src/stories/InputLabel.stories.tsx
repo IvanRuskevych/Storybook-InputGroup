@@ -9,10 +9,10 @@ const meta: Meta = {
   title: "Components/InputLabel",
   component: InputLabel,
   argTypes: {
+    theme: { control: "radio", options: ["light", "dark"] },
     label: { control: "text" },
     required: { control: "boolean" },
     infoIcon: { control: "boolean" },
-    theme: { control: "radio", options: ["light", "dark"] },
   },
 };
 
@@ -32,8 +32,8 @@ const Template: StoryFn<InputLabelProps & { theme: "light" | "dark" }> = (
 
 export const Default = Template.bind({});
 Default.args = {
+  theme: "light",
   label: "Email",
   required: true,
   infoIcon: true,
-  theme: "light",
 };
