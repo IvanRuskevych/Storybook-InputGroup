@@ -8,10 +8,17 @@ export const InputAnnotation: FC<InputAnnotationProps> = ({
   text,
   textError,
   isError = false,
+  position = top,
   ...props
 }) => {
   return (
-    <StyledParagraph className={clsx({ "text-error": isError })} {...props}>
+    <StyledParagraph
+      className={clsx({
+        "text-error": isError,
+        "input__position--side": position,
+      })}
+      {...props}
+    >
       {!isError && text}
       {isError && textError}
     </StyledParagraph>

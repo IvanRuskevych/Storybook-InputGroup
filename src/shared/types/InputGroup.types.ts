@@ -6,4 +6,5 @@ export interface InputGroupProps {
   inputLabelProps: InputLabelProps;
   inputTextProps: InputTextProps;
   inputAnnotationProps: InputAnnotationProps;
+  position?: "side" | "top";
 }

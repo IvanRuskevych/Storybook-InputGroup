@@ -1,5 +1,5 @@
 import { ChangeEvent } from "react";
-import { SizeTypes } from "./UnionTypes.types.ts";
+import { InputPositionTypes, SizeTypes } from "./UnionTypes.types.ts";
 
 export interface InputTextProps {
   id: string;
@@ -9,4 +9,5 @@ export interface InputTextProps {
   isError?: boolean;
   size?: SizeTypes;
   onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
+  position?: InputPositionTypes;
 }

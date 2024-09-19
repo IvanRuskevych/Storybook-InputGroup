@@ -18,4 +18,8 @@ export const InputLabelWrapper = styled.div`
   & span {
     color: ${({ theme }) => theme.colors.textError};
   }
+
+  &.input__position--side {
+    grid-area: label;
+  }
 `;
