@@ -9,7 +9,7 @@ export const InputLabelWrapper = styled.div`
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
-  line-height: 1.66667; /* 20px */
+  line-height: 1.66667;
 
   & label {
     color: ${({ theme }) => theme.colors.textPrimary};
@@ -17,9 +17,5 @@ export const InputLabelWrapper = styled.div`
 
   & span {
     color: ${({ theme }) => theme.colors.textError};
-  }
-
-  &.input__position--side {
-    grid-area: label;
   }
 `;

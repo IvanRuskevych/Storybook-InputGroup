@@ -11,7 +11,7 @@ export const InputGroup: FC<InputGroupProps> = ({
   inputLabelProps,
   inputTextProps,
   inputAnnotationProps,
-  position = "side",
+  position = "top",
   ...props
 }) => {
   return (

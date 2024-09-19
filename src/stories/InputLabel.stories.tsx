@@ -12,7 +12,8 @@ const meta: Meta = {
     theme: { control: "radio", options: ["light", "dark"] },
     label: { control: "text" },
     required: { control: "boolean" },
-    infoIcon: { control: "boolean" },
+    textTooltip: { control: "text" },
+    isIcon: { control: "boolean" },
   },
 };
 
@@ -35,5 +36,6 @@ Default.args = {
   theme: "light",
   label: "Email",
   required: true,
-  infoIcon: true,
+  textTooltip: "This is a tooltip",
+  isIcon: false,
 };

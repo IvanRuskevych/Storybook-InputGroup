@@ -10,6 +10,7 @@ export const InputIcon: FC<InputIconProps> = ({
   size = "sm",
   isError = false,
 }) => {
+  console.log("size: ", size);
   return (
     <StyledIcon
       className={clsx(`${iconType}`, `${iconType}--${size}`, {

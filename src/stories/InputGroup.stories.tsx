@@ -36,7 +36,7 @@ Default.args = {
     htmlFor: "email",
     label: "Email",
     required: true,
-    infoIcon: true,
+    isIcon: true,
   },
   inputTextProps: {
     id: "email",
@@ -60,7 +60,7 @@ ErrorState.args = {
     htmlFor: "email",
     label: "Email",
     required: true,
-    infoIcon: true,
+    isIcon: true,
   },
   inputTextProps: {
     id: "email",

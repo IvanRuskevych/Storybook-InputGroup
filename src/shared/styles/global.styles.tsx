@@ -27,8 +27,10 @@ export const GlobalStyles = createGlobalStyle`
         font-weight: 400;
         line-height: 1.66667; /* 20px */
         -webkit-font-smoothing: antialiased;
-        
+
         padding: 50px;
+
+        background-color: ${({ theme }) => theme.colors.bgPlayground};
     }
 
     /* 5. Improve media defaults */
