@@ -1,8 +1,10 @@
 import { Meta, StoryFn } from "@storybook/react";
-import { InputText, InputTextProps } from "../shared/ui";
-import { darkTheme, lightTheme } from "../shared/styles";
-import { ThemeProvider } from "styled-components";
 import { fn } from "@storybook/test";
+
+import { InputTextProps, ThemeTypes } from "../shared/types";
+import { darkTheme, lightTheme } from "../shared/styles";
+import { InputText } from "../shared/ui";
+import { ThemeProvider } from "styled-components";
 
 const meta: Meta = {
   title: "Components/InputText",
@@ -19,9 +21,7 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: StoryFn<InputTextProps & { theme: "light" | "dark" }> = (
-  args,
-) => {
+const Template: StoryFn<InputTextProps & { theme: ThemeTypes }> = (args) => {
   const selectedTheme = args.theme === "light" ? lightTheme : darkTheme;
 
   return (

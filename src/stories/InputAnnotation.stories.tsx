@@ -10,7 +10,7 @@ const meta: Meta = {
   component: InputAnnotation,
   argTypes: {
     text: { control: "text" },
-    textOptions: { control: "radio", options: ["description", "error"] },
+    textError: { control: "text" },
     theme: { control: "radio", options: ["light", "dark"] },
   },
 };
@@ -31,7 +31,7 @@ const Template: StoryFn<InputAnnotationProps & { theme: "light" | "dark" }> = (
 
 export const Default = Template.bind({});
 Default.args = {
-  text: "This is a hint text to help user.",
-  textOptions: "description",
+  text: "Example: email@test.com.",
+  textError: "Enter your email address.",
   theme: "light",
 };
