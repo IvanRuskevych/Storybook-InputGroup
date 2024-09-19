@@ -21,8 +21,14 @@ export const GlobalStyles = createGlobalStyle`
       4. Improve text rendering
     */
     body {
-        line-height: 1.5;
+        font-family: Inter, sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.66667; /* 20px */
         -webkit-font-smoothing: antialiased;
+        
+        padding: 50px;
     }
 
     /* 5. Improve media defaults */
@@ -73,5 +79,4 @@ export const GlobalStyles = createGlobalStyle`
         outline: 0;
         font-style: normal;
     }
-
 `;

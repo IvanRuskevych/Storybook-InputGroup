@@ -1,23 +1,23 @@
 import { FC } from "react";
 
 import { InputLabelProps } from "../../types";
+import { InputIcon } from "../InputIcon/InputIcon.tsx";
 import { InputLabelWrapper } from "./InputLabel.styles.ts";
-import spritePath from "../../../assets/svg/svg-sprite.svg";
 
 export const InputLabel: FC<InputLabelProps> = ({
+  htmlFor,
   label,
   required,
   infoIcon,
+  ...props
 }) => {
   return (
     <InputLabelWrapper>
-      <label>{label}</label>
+      <label htmlFor={htmlFor} {...props}>
+        {label}
+      </label>
       {required && <span>*</span>}
-      {infoIcon && (
-        <svg>
-          <use href={`${spritePath}#icon-info`}></use>
-        </svg>
-      )}
+      {infoIcon && <InputIcon iconType={"info"} />}
     </InputLabelWrapper>
   );
 };
