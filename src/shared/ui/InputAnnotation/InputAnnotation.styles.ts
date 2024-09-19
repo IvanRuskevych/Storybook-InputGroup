@@ -5,13 +5,13 @@ export const StyledParagraph = styled.p`
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: 1.66667; /* 20px */
+  line-height: 1.66667;
   width: 100%;
 
-  color: #51525c;
+  color: ${({ theme }) => theme.colors.textSecondary};
 
   &.text-error {
-    color: #d92d20;
+    color: ${({ theme }) => theme.colors.textError};
   }
 
   &.input__position--side {

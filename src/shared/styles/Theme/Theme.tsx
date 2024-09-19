@@ -9,8 +9,11 @@ export const lightTheme = {
     textSecondary: "#51525c",
     textPlaceholder: "#70707B",
     textError: "#D92D20",
+    textTooltip: "#fff",
     bgPrimary: "#fff",
     bgInput: "#fff",
+    bgTooltip: "#131316",
+    bgPlayground: "#fff",
     borderPrimary: "#D1D1D6", // hover
     borderBrand: "#84CAFF", // focus
     borderError: "#D92D20",
@@ -27,8 +30,11 @@ export const darkTheme = {
     textSecondary: "#A0A0AB",
     textPlaceholder: "#A0A0AB", // ??
     textError: "#F97066",
+    textTooltip: "#fff",
     bgPrimary: "#1A1A1E",
     bgInput: "#131316",
+    bgTooltip: "#131316",
+    bgPlayground: "#131316",
     borderPrimary: "#51525C",
     borderBrand: "#53B1FD",
     borderError: "#F04438",

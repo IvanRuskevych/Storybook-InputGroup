@@ -2,15 +2,15 @@ import styled from "styled-components";
 
 export const InputTextWrapper = styled.div`
   position: relative;
-  min-width: 250px;
+  width: fit-content;
 
   & input {
     width: 100%;
-    box-sizing: border-box; // TODO check reset styles
+    box-sizing: border-box;
     overflow: hidden;
     text-overflow: ellipsis;
     border: 1px solid ${({ theme }) => theme.colors.borderPrimary};
-    border-radius: 4px; // --radius-xs
+    border-radius: 4px;
     color: ${({ theme }) => theme.colors.textPrimary};
     background-color: ${({ theme }) => theme.colors.bgPrimary};
 

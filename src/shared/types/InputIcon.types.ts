@@ -4,4 +4,5 @@ export interface InputIconProps {
   iconType: IconTypes;
   size?: SizeTypes;
   isError?: boolean;
+  textTooltip?: string;
 }

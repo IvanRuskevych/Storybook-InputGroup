@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const InputGroupContainer = styled.div`
   display: grid;
   gap: 4px;
+  grid-template-columns: 1fr;
 
   grid-template-areas:
     "label"

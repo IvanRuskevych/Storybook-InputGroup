@@ -11,7 +11,7 @@ export const InputText: FC<InputTextProps> = ({
   placeholder,
   isInvisibleBorder = false,
   isError = false,
-  size = "sm",
+  size = "xs",
   onChange,
   position,
 

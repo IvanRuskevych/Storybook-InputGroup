@@ -35,6 +35,7 @@ const Template: StoryFn<InputTextProps & { theme: ThemeTypes }> = (args) => {
 export const Default = Template.bind({});
 Default.args = {
   theme: "light",
+  value: "",
   placeholder: "",
   isInvisibleBorder: false,
   isError: false,
