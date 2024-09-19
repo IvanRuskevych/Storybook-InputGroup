@@ -9,6 +9,7 @@ const meta: Meta = {
   component: InputGroup,
   argTypes: {
     theme: { control: "radio", options: ["light", "dark"] },
+    position: { control: "radio", options: ["top", "side"] },
     inputLabelProps: { control: "object" },
     inputTextProps: { control: "object" },
     inputAnnotationProps: { control: "object" },
@@ -30,6 +31,7 @@ const Template: StoryFn<InputGroupProps & { theme: ThemeTypes }> = (args) => {
 export const Default = Template.bind({});
 Default.args = {
   theme: "light",
+  position: "top",
   inputLabelProps: {
     htmlFor: "email",
     label: "Email",
@@ -53,6 +55,7 @@ Default.args = {
 export const ErrorState = Template.bind({});
 ErrorState.args = {
   theme: "light",
+  position: "top",
   inputLabelProps: {
     htmlFor: "email",
     label: "Email",

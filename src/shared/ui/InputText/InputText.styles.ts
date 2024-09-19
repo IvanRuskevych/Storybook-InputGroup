@@ -68,6 +68,6 @@ export const InputTextWrapper = styled.div`
   }
 
   .input__position--side {
-    grid-area: text;
+    grid-area: input;
   }
 `;
