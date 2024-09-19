@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
-export const StyledParagraph = styled.p<{}>`
+export const StyledParagraph = styled.p`
   font-family: Inter, sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: 20px; /* 166.667% */
+  line-height: 1.66667; /* 20px */
 
-  color: ${({ theme }) => theme.colors.textSecondary};
+  color: #51525c;
 
   &.text-error {
-    color: ${({ theme }) => theme.colors.textError};
+    color: #d92d20;
   }
 `;
