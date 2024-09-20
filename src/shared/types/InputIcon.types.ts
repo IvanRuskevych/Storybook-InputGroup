@@ -1,8 +1,10 @@
-import { IconTypes, SizeTypes } from "./UnionTypes.types.ts";
+import { SVGProps } from "react";
 
-export interface InputIconProps {
+import { IconTypes, InputSizeTypes } from "./UnionTypes.types.ts";
+
+export interface InputIconProps extends SVGProps<SVGSVGElement> {
   iconType: IconTypes;
-  size?: SizeTypes;
+  inputSize?: InputSizeTypes;
   isError?: boolean;
   textTooltip?: string;
   isIconShortkey?: boolean;

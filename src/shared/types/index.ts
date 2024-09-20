@@ -5,3 +5,4 @@ export * from "./InputGroup.types.ts";
 export * from "./InputIcon.types.ts";
 export * from "./InputText.types.ts";
 export * from "./UnionTypes.types.ts";
+export * from "./Tooltip.types.ts";

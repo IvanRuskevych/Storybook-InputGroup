@@ -6,12 +6,8 @@ import { InputIcon } from "../InputIcon/InputIcon.tsx";
 import { InputTextWrapper } from "./InputText.styles.ts";
 
 export const InputText: FC<InputTextProps> = ({
-  id,
-  value,
-  placeholder,
   position,
-  onChange,
-  size = "xl",
+  inputSize = "xl",
   isInvisibleBorder = false,
   isIconSearch = true,
   isIconHelp = true,
@@ -27,37 +23,40 @@ export const InputText: FC<InputTextProps> = ({
   return (
     <InputTextWrapper>
       <input
-        id={id}
-        type="text"
-        placeholder={placeholder}
-        value={value}
-        onChange={onChange}
         className={clsx({
           "border--invisible": isInvisibleBorder,
           "input--error": isError,
           "text__side--right": isTextRightSide,
           "input__position--side": position,
-          [size]: size,
-          [`${size}--no-search-icon`]: !isIconSearch,
-          [`${size}--only-help-icon`]: showOnlyHelpIcon,
-          [`${size}--only-shortkey-icon`]: showOnlyShortkeyIcon,
-          [`${size}--no-right-icons`]: hideRightIcons,
+          [inputSize]: inputSize,
+          [`${inputSize}--no-search-icon`]: !isIconSearch,
+          [`${inputSize}--only-help-icon`]: showOnlyHelpIcon,
+          [`${inputSize}--only-shortkey-icon`]: showOnlyShortkeyIcon,
+          [`${inputSize}--no-right-icons`]: hideRightIcons,
         })}
         {...props}
       />
       {isIconSearch && (
-        <InputIcon iconType={"search"} size={size} isError={isError} />
+        <InputIcon
+          iconType={"search"}
+          inputSize={inputSize}
+          isError={isError}
+        />
       )}
       {isIconHelp && (
         <InputIcon
           iconType={"help"}
-          size={size}
+          inputSize={inputSize}
           isError={isError}
           isIconShortkey={isIconShortkey}
         />
       )}
       {isIconShortkey && (
-        <InputIcon iconType={"shortkey"} size={size} isError={isError} />
+        <InputIcon
+          iconType={"shortkey"}
+          inputSize={inputSize}
+          isError={isError}
+        />
       )}
     </InputTextWrapper>
   );
