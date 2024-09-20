@@ -10,4 +10,7 @@ export interface InputTextProps {
   size?: SizeTypes;
   onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
   position?: InputPositionTypes;
+  isIconSearch?: boolean;
+  isIconHelp?: boolean;
+  isIconShortkey?: boolean;
 }

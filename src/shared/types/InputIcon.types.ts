@@ -5,4 +5,5 @@ export interface InputIconProps {
   size?: SizeTypes;
   isError?: boolean;
   textTooltip?: string;
+  isIconShortkey?: boolean;
 }

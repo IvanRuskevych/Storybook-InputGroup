@@ -40,6 +40,18 @@ export const StyledIcon = styled.svg`
     &--error {
       fill: ${({ theme }) => theme.colors.fillSvgError};
     }
+
+    &__alone {
+      right: 13px;
+
+      &--lg {
+        right: 17px;
+      }
+
+      &--xl {
+        right: 17px;
+      }
+    }
   }
 
   &.shortkey {

@@ -13,7 +13,7 @@ const meta: Meta = {
     label: { control: "text" },
     required: { control: "boolean" },
     textTooltip: { control: "text" },
-    isIcon: { control: "boolean" },
+    isInfoIcon: { control: "boolean" },
   },
 };
 
@@ -37,5 +37,5 @@ Default.args = {
   label: "Email",
   required: true,
   textTooltip: "This is a tooltip",
-  isIcon: false,
+  isInfoIcon: false,
 };
