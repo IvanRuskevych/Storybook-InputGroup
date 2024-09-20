@@ -45,8 +45,8 @@ Error generating stack: `+o.message+`
   z-index: 10;
   min-width: 120px;
   background-color: ${({theme:e})=>e.colors.bgTooltip};
-  padding: 0.5rem 0.75rem;
-  border-radius: 0.5rem;
+  padding: 8px 12px;
+  border-radius: 8px;
 
   color: ${({theme:e})=>e.colors.textTooltip};
   text-align: center;
@@ -62,7 +62,7 @@ Error generating stack: `+o.message+`
       transparent transparent;
     transform: translate(-310%, 50%);
   }
-`,Am=({textTooltip:e})=>j.jsx(Mm,{children:j.jsx("p",{className:"text-xs font-semibold",children:e})}),Um=ct.div`
+`,Am=({textTooltip:e,...t})=>j.jsx(Mm,{children:j.jsx("p",{...t,children:e})}),Um=ct.div`
   position: relative;
 `;function sd(e){var t,n,r="";if(typeof e=="string"||typeof e=="number")r+=e;else if(typeof e=="object")if(Array.isArray(e)){var l=e.length;for(t=0;t<l;t++)e[t]&&(n=sd(e[t]))&&(r&&(r+=" "),r+=n)}else for(n in e)e[n]&&(r&&(r+=" "),r+=n);return r}function So(){for(var e,t,n=0,r="",l=arguments.length;n<l;n++)(e=arguments[n])&&(t=sd(e))&&(r&&(r+=" "),r+=t);return r}const Bm="/storybook-inputgroup/assets/sprite-BBCUQV6_.svg",Vm=ct.svg`
   position: absolute;
@@ -140,7 +140,7 @@ Error generating stack: `+o.message+`
     height: 12px;
     fill: ${({theme:e})=>e.colors.fillSvg};
   }
-`,kl=({iconType:e,size:t,isError:n=!1,isIconShortkey:r})=>j.jsx(Vm,{className:So(`${e}`,`${e}--${t}`,{[`${e}--error`]:n,[`${e}__alone`]:!r,[`${e}__alone--${t}`]:!r}),children:j.jsx("use",{href:`${Bm}#${e}`})}),Wm=({textTooltip:e,iconType:t})=>{const[n,r]=Lt.useState(!1);return j.jsxs(Um,{onMouseEnter:()=>r(!0),onMouseLeave:()=>r(!1),children:[n&&j.jsx(Am,{textTooltip:e}),j.jsx(kl,{iconType:t})]})},Hm=ct.div`
+`,kl=({iconType:e,inputSize:t,isError:n=!1,isIconShortkey:r,...l})=>j.jsx(Vm,{...l,className:So(`${e}`,`${e}--${t}`,{[`${e}--error`]:n,[`${e}__alone`]:!r,[`${e}__alone--${t}`]:!r}),children:j.jsx("use",{href:`${Bm}#${e}`})}),Wm=({textTooltip:e,iconType:t})=>{const[n,r]=Lt.useState(!1);return j.jsxs(Um,{onMouseEnter:()=>r(!0),onMouseLeave:()=>r(!1),children:[n&&j.jsx(Am,{textTooltip:e}),j.jsx(kl,{iconType:t})]})},Hm=ct.div`
   display: flex;
   gap: 4px;
   align-items: center;
@@ -321,7 +321,7 @@ Error generating stack: `+o.message+`
       text-align: right;
     }
   }
-`,Xm=({id:e,value:t,placeholder:n,position:r,onChange:l,size:o="xl",isInvisibleBorder:i=!1,isIconSearch:u=!0,isIconHelp:s=!0,isIconShortkey:c=!0,isError:m=!1,isTextRightSide:h=!0,...p})=>{const g=s&&!c,y=!s&&c,x=!s&&!c;return j.jsxs(Gm,{children:[j.jsx("input",{id:e,type:"text",placeholder:n,value:t,onChange:l,className:So({"border--invisible":i,"input--error":m,"text__side--right":h,"input__position--side":r,[o]:o,[`${o}--no-search-icon`]:!u,[`${o}--only-help-icon`]:g,[`${o}--only-shortkey-icon`]:y,[`${o}--no-right-icons`]:x}),...p}),u&&j.jsx(kl,{iconType:"search",size:o,isError:m}),s&&j.jsx(kl,{iconType:"help",size:o,isError:m,isIconShortkey:c}),c&&j.jsx(kl,{iconType:"shortkey",size:o,isError:m})]})},Zm=ct.div`
+`,Xm=({position:e,inputSize:t="xl",isInvisibleBorder:n=!1,isIconSearch:r=!0,isIconHelp:l=!0,isIconShortkey:o=!0,isError:i=!1,isTextRightSide:u=!0,...s})=>{const c=l&&!o,m=!l&&o,h=!l&&!o;return j.jsxs(Gm,{children:[j.jsx("input",{className:So({"border--invisible":n,"input--error":i,"text__side--right":u,"input__position--side":e,[t]:t,[`${t}--no-search-icon`]:!r,[`${t}--only-help-icon`]:c,[`${t}--only-shortkey-icon`]:m,[`${t}--no-right-icons`]:h}),...s}),r&&j.jsx(kl,{iconType:"search",inputSize:t,isError:i}),l&&j.jsx(kl,{iconType:"help",inputSize:t,isError:i,isIconShortkey:o}),o&&j.jsx(kl,{iconType:"shortkey",inputSize:t,isError:i})]})},Zm=ct.div`
   display: grid;
   gap: 4px;
   grid-template-columns: 1fr;
@@ -426,4 +426,4 @@ Error generating stack: `+o.message+`
     gap: 5rem;
     width: 60%;
     margin: 0 auto;
-  `;return j.jsx(e1,{theme:"light",children:j.jsxs(r,{children:[j.jsx(bo,{position:n,inputLabelProps:{htmlFor:"email",label:"Email",required:!0,textTooltip:"This is an email tooltip",isInfoIcon:!0},inputTextProps:{id:"email",placeholder:"Input...",isError:!1,isInvisibleBorder:!1,isIconSearch:!0,isIconHelp:!0,isIconShortkey:!0},inputAnnotationProps:{text:"Example: email@test.com",textError:"Please enter correct email address. ",isError:!1}}),j.jsx(bo,{position:n,inputLabelProps:{htmlFor:"password",label:"Password",required:!0,textTooltip:"This is a password tooltip",isInfoIcon:!0},inputTextProps:{id:"email",placeholder:"Input...",isError:!0,isInvisibleBorder:!1,isIconSearch:!0,isIconHelp:!0,isIconShortkey:!0},inputAnnotationProps:{text:"Example: Password12@!%",textError:"Please enter correct password. ",isError:!0}}),j.jsx(bo,{position:"side",inputLabelProps:{htmlFor:"data",label:"Data info",required:!0,textTooltip:"This is a data tooltip",isInfoIcon:!0},inputTextProps:{id:"email",placeholder:"Input...",isError:!1,isInvisibleBorder:!0,isIconSearch:!1,isIconHelp:!1,isIconShortkey:!1},inputAnnotationProps:{text:"Example: 12345",textError:"Please enter data. ",isError:!1}})]})})}jf(document.getElementById("root")).render(j.jsx(Lt.StrictMode,{children:j.jsx(t1,{})}));
+  `;return j.jsx(e1,{theme:"light",children:j.jsxs(r,{children:[j.jsx(bo,{position:n,inputLabelProps:{htmlFor:"email",label:"Email",required:!0,textTooltip:"This is an email tooltip",isInfoIcon:!0},inputTextProps:{id:"email",type:"text",placeholder:"Input...",isError:!1,isInvisibleBorder:!1,isIconSearch:!0,isIconHelp:!0,isIconShortkey:!0},inputAnnotationProps:{text:"Example: email@test.com",textError:"Please enter correct email address. ",isError:!1}}),j.jsx(bo,{position:n,inputLabelProps:{htmlFor:"password",label:"Password",required:!0,textTooltip:"This is a password tooltip",isInfoIcon:!0},inputTextProps:{id:"email",type:"text",placeholder:"Input...",isError:!0,isInvisibleBorder:!1,isIconSearch:!0,isIconHelp:!0,isIconShortkey:!0},inputAnnotationProps:{text:"Example: Password12@!%",textError:"Please enter correct password. ",isError:!0}}),j.jsx(bo,{position:"side",inputLabelProps:{htmlFor:"data",label:"Data info",required:!0,textTooltip:"This is a data tooltip",isInfoIcon:!0},inputTextProps:{id:"email",type:"text",placeholder:"Input...",isError:!1,isInvisibleBorder:!0,isIconSearch:!1,isIconHelp:!1,isIconShortkey:!1,disabled:!0},inputAnnotationProps:{text:"Example: 12345",textError:"Please enter data. ",isError:!1}})]})})}jf(document.getElementById("root")).render(j.jsx(Lt.StrictMode,{children:j.jsx(t1,{})}));
