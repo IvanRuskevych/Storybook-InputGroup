@@ -1,14 +1,11 @@
-import { ChangeEvent } from "react";
-import { InputPositionTypes, SizeTypes } from "./UnionTypes.types.ts";
+import { InputHTMLAttributes } from "react";
 
-export interface InputTextProps {
-  id: string;
-  placeholder: string;
-  value?: string;
+import { InputPositionTypes, InputSizeTypes } from "./UnionTypes.types.ts";
+
+export interface InputTextProps extends InputHTMLAttributes<HTMLInputElement> {
   isInvisibleBorder?: boolean;
   isError?: boolean;
-  size?: SizeTypes;
-  onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
+  inputSize?: InputSizeTypes;
   position?: InputPositionTypes;
   isIconSearch?: boolean;
   isIconHelp?: boolean;

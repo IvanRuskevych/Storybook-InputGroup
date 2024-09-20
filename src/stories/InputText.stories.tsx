@@ -1,10 +1,10 @@
 import { Meta, StoryFn } from "@storybook/react";
 import { fn } from "@storybook/test";
+import { ThemeProvider } from "styled-components";
 
 import { InputTextProps, ThemeTypes } from "../shared/types";
 import { darkTheme, lightTheme } from "../shared/styles";
 import { InputText } from "../shared/ui";
-import { ThemeProvider } from "styled-components";
 
 const meta: Meta = {
   title: "Components/InputText",
@@ -14,7 +14,7 @@ const meta: Meta = {
     position: { control: "radio", options: ["top", "side"] },
     value: { control: "text" },
     placeholder: { control: "text" },
-    size: { control: "radio", options: ["xs", "sm", "lg", "xl"] },
+    inputSize: { control: "radio", options: ["xs", "sm", "lg", "xl"] },
     isInvisibleBorder: { control: "boolean" },
     isIconSearch: { control: "boolean" },
     isIconHelp: { control: "boolean" },
@@ -43,7 +43,7 @@ Default.args = {
   position: "top",
   value: "",
   placeholder: "Input...",
-  size: "sm",
+  inputSize: "sm",
   isInvisibleBorder: false,
   isIconSearch: true,
   isIconHelp: true,

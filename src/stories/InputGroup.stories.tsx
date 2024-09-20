@@ -1,8 +1,9 @@
 import { Meta, StoryFn } from "@storybook/react";
+import { ThemeProvider } from "styled-components";
+
 import { InputGroup } from "../shared/ui";
 import { InputGroupProps, ThemeTypes } from "../shared/types";
 import { darkTheme, lightTheme } from "../shared/styles";
-import { ThemeProvider } from "styled-components";
 
 const meta: Meta = {
   title: "Components/InputGroup",
@@ -41,10 +42,15 @@ Default.args = {
   },
   inputTextProps: {
     id: "email",
-    placeholder: "Enter your email...",
+    value: "",
+    placeholder: "Input...",
+    inputSize: "sm",
     isInvisibleBorder: false,
+    isIconSearch: true,
+    isIconHelp: true,
+    isIconShortkey: true,
+    isTextRightSide: false,
     isError: false,
-    size: "sm",
   },
   inputAnnotationProps: {
     text: "Example: email@test.com",
@@ -65,10 +71,15 @@ ErrorState.args = {
   },
   inputTextProps: {
     id: "email",
-    placeholder: "Enter your email...",
+    value: "",
+    placeholder: "Input...",
+    inputSize: "sm",
     isInvisibleBorder: false,
+    isIconSearch: true,
+    isIconHelp: true,
+    isIconShortkey: true,
+    isTextRightSide: false,
     isError: true,
-    size: "sm",
   },
   inputAnnotationProps: {
     text: "Example: email@test.com",

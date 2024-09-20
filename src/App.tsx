@@ -28,6 +28,7 @@ function App() {
           }}
           inputTextProps={{
             id: "email",
+            type: "text",
             placeholder: "Input...",
             isError: isError,
             isInvisibleBorder: isInvisibleBorder,
@@ -53,6 +54,7 @@ function App() {
           }}
           inputTextProps={{
             id: "email",
+            type: "text",
             placeholder: "Input...",
             isError: true,
             isInvisibleBorder: isInvisibleBorder,
@@ -78,12 +80,14 @@ function App() {
           }}
           inputTextProps={{
             id: "email",
+            type: "text",
             placeholder: "Input...",
             isError: false,
             isInvisibleBorder: true,
             isIconSearch: false,
             isIconHelp: false,
             isIconShortkey: false,
+            disabled: true,
           }}
           inputAnnotationProps={{
             text: "Example: 12345",
