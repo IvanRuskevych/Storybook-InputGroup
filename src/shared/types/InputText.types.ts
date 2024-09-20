@@ -13,4 +13,5 @@ export interface InputTextProps {
   isIconSearch?: boolean;
   isIconHelp?: boolean;
   isIconShortkey?: boolean;
+  isTextRightSide?: boolean;
 }

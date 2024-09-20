@@ -138,4 +138,12 @@ export const InputTextWrapper = styled.div`
   .input__position--side {
     grid-area: input;
   }
+
+  .text__side--right {
+    text-align: right;
+
+    &::placeholder {
+      text-align: right;
+    }
+  }
 `;

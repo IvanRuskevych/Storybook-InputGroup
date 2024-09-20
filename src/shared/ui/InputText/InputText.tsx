@@ -14,11 +14,10 @@ export const InputText: FC<InputTextProps> = ({
   size = "xl",
   isInvisibleBorder = false,
   isIconSearch = true,
-
   isIconHelp = true,
   isIconShortkey = true,
-
   isError = false,
+  isTextRightSide = true,
   ...props
 }) => {
   const showOnlyHelpIcon = isIconHelp && !isIconShortkey;
@@ -36,6 +35,7 @@ export const InputText: FC<InputTextProps> = ({
         className={clsx({
           "border--invisible": isInvisibleBorder,
           "input--error": isError,
+          "text__side--right": isTextRightSide,
           "input__position--side": position,
           [size]: size,
           [`${size}--no-search-icon`]: !isIconSearch,
