@@ -36,6 +36,6 @@ Default.args = {
   theme: "light",
   label: "Email",
   required: true,
+  isInfoIcon: true,
   textTooltip: "This is a tooltip",
-  isInfoIcon: false,
 };

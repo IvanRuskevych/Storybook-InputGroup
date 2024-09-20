@@ -11,11 +11,15 @@ const meta: Meta = {
   component: InputText,
   argTypes: {
     theme: { control: "radio", options: ["light", "dark"] },
+    position: { control: "radio", options: ["top", "side"] },
     value: { control: "text" },
     placeholder: { control: "text" },
-    isInvisibleBorder: { control: "boolean" },
-    isError: { control: "boolean" },
     size: { control: "radio", options: ["xs", "sm", "lg", "xl"] },
+    isInvisibleBorder: { control: "boolean" },
+    isIconSearch: { control: "boolean" },
+    isIconHelp: { control: "boolean" },
+    isIconShortkey: { control: "boolean" },
+    isError: { control: "boolean" },
   },
   args: { onChange: fn() },
 };
@@ -35,9 +39,13 @@ const Template: StoryFn<InputTextProps & { theme: ThemeTypes }> = (args) => {
 export const Default = Template.bind({});
 Default.args = {
   theme: "light",
+  position: "top",
   value: "",
   placeholder: "",
-  isInvisibleBorder: false,
-  isError: false,
   size: "sm",
+  isInvisibleBorder: false,
+  isIconSearch: true,
+  isIconHelp: true,
+  isIconShortkey: true,
+  isError: false,
 };
