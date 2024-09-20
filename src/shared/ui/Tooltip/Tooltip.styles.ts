@@ -7,8 +7,8 @@ export const TooltipContainer = styled.div`
   z-index: 10;
   min-width: 120px;
   background-color: ${({ theme }) => theme.colors.bgTooltip};
-  padding: 0.5rem 0.75rem;
-  border-radius: 0.5rem;
+  padding: 8px 12px;
+  border-radius: 8px;
 
   color: ${({ theme }) => theme.colors.textTooltip};
   text-align: center;

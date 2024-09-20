@@ -23,7 +23,6 @@ export const InputText: FC<InputTextProps> = ({
   return (
     <InputTextWrapper>
       <input
-        // onChange={onChange}
         className={clsx({
           "border--invisible": isInvisibleBorder,
           "input--error": isError,

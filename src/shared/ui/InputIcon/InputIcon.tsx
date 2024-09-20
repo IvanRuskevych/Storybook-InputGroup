@@ -1,7 +1,7 @@
 import { FC } from "react";
 import clsx from "clsx";
 
-import { InputIconProps, InputSizeTypes } from "../../types";
+import { InputIconProps } from "../../types";
 import spritePath from "../../../assets/svg/sprite.svg";
 import { StyledIcon } from "./InputIcon.styles.ts";
 
