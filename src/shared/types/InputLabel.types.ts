@@ -3,5 +3,5 @@ export interface InputLabelProps {
   label: string;
   required?: boolean;
   textTooltip?: string;
-  isIcon?: boolean;
+  isInfoIcon?: boolean;
 }

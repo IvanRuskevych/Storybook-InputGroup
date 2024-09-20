@@ -32,38 +32,106 @@ export const InputTextWrapper = styled.div`
       box-shadow: 0 0 0 4px ${({ theme }) => theme.colors.borderShadow};
     }
 
-    &.focus-error {
+    &.input--error {
       outline: none;
       border: 1px solid ${({ theme }) => theme.colors.borderError};
       box-shadow: 0 0 0 4px ${({ theme }) => theme.colors.borderShadowError};
     }
 
     &.xs {
-      padding: 2px 77px 2px 37px;
+      padding: 2px calc(8px + 16px + 8px + 32px + 12px) 2px
+        calc(12px + 16px + 8px);
       font-size: 12px;
-      line-height: 1.66667; /* 20px */
+      line-height: 1.66667;
+
+      &--no-search-icon {
+        padding-left: 12px;
+      }
+
+      &--no-right-icons {
+        padding-right: 12px;
+      }
+
+      &--only-help-icon {
+        padding-right: calc(8px + 16px + 12px);
+      }
+
+      &--only-shortkey-icon {
+        padding-right: calc(8px + 32px + 12px);
+      }
     }
 
     &.sm {
-      padding: 8px 77px 8px 37px;
+      padding: 8px calc(8px + 16px + 8px + 32px + 12px) 8px
+        calc(12px + 16px + 8px);
       font-size: 12px;
       line-height: 1.66667;
+
+      &--no-search-icon {
+        padding-left: 12px;
+      }
+
+      &--no-right-icons {
+        padding-right: 12px;
+      }
+
+      &--only-help-icon {
+        padding-right: calc(8px + 16px + 12px);
+      }
+
+      &--only-shortkey-icon {
+        padding-right: calc(8px + 32px + 12px);
+      }
     }
 
     &.lg {
-      padding: 8px 77px 8px 41px;
+      padding: 8px calc(8px + 16px + 8px + 32px + 12px) 8px
+        calc(16px + 16px + 8px);
       font-size: 14px;
-      line-height: 1.71429; /* 24px */
+      line-height: 1.71429;
+
+      &--no-search-icon {
+        padding-left: 16px;
+      }
+
+      &--no-right-icons {
+        padding-right: 12px;
+      }
+
+      &--only-help-icon {
+        padding-right: calc(8px + 16px + 12px);
+      }
+
+      &--only-shortkey-icon {
+        padding-right: calc(8px + 32px + 12px);
+      }
     }
 
     &.xl {
-      padding: 12px 77px 12px 41px;
+      padding: 12px calc(8px + 16px + 8px + 32px + 12px) 12px
+        calc(16px + 16px + 8px);
       font-size: 14px;
-      line-height: 1.71429; /* 24px */
+      line-height: 1.71429;
+
+      &--no-search-icon {
+        padding-left: 16px;
+      }
+
+      &--no-right-icons {
+        padding-right: 12px;
+      }
+
+      &--only-help-icon {
+        padding-right: calc(8px + 16px + 12px);
+      }
+
+      &--only-shortkey-icon {
+        padding-right: calc(8px + 32px + 12px);
+      }
     }
   }
 
-  .invisible-border {
+  .border--invisible {
     border: 1px solid transparent;
   }
 

@@ -4,7 +4,7 @@ import { ThemeStyles } from "./shared/styles";
 function App() {
   const isError = true;
   const isInvisibleBorder = false;
-  const position = "side";
+  const position = "top";
 
   return (
     <ThemeStyles theme={"light"}>
@@ -15,13 +15,17 @@ function App() {
           label: "Email",
           required: true,
           textTooltip: "This is a tooltip 1",
-          isIcon: true,
+          isInfoIcon: true,
         }}
         inputTextProps={{
           id: "email",
           placeholder: "Input...",
           isError: isError,
           isInvisibleBorder: isInvisibleBorder,
+          isIconSearch: false,
+
+          isIconHelp: true,
+          isIconShortkey: false,
         }}
         inputAnnotationProps={{
           text: "Example: email@test.com",

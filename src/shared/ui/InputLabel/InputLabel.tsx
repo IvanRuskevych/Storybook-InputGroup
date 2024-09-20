@@ -9,7 +9,7 @@ export const InputLabel: FC<InputLabelProps> = ({
   label,
   required,
   textTooltip,
-  isIcon,
+  isInfoIcon,
   ...props
 }) => {
   return (
@@ -20,7 +20,7 @@ export const InputLabel: FC<InputLabelProps> = ({
 
       {required && <span>*</span>}
 
-      {isIcon && (
+      {isInfoIcon && (
         <InputIconWithTooltip iconType={"info"} textTooltip={textTooltip} />
       )}
     </InputLabelWrapper>

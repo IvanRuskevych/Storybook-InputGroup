@@ -7,14 +7,16 @@ import { StyledIcon } from "./InputIcon.styles.ts";
 
 export const InputIcon: FC<InputIconProps> = ({
   iconType,
-  size = "sm",
+  size,
   isError = false,
+  isIconShortkey,
 }) => {
-  console.log("size: ", size);
   return (
     <StyledIcon
       className={clsx(`${iconType}`, `${iconType}--${size}`, {
         [`${iconType}--error`]: isError,
+        [`${iconType}__alone`]: !isIconShortkey,
+        [`${iconType}__alone--${size}`]: !isIconShortkey,
       })}
     >
       <use href={`${spritePath}#${iconType}`}></use>
