@@ -37,6 +37,7 @@ Default.args = {
     label: "Email",
     required: true,
     isInfoIcon: true,
+    textTooltip: "This is a tooltip",
   },
   inputTextProps: {
     id: "email",
